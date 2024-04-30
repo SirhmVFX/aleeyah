@@ -40,7 +40,7 @@ const ChatBot = () => {
       }
 
       const response = await axios.post(
-        "http://localhost:8000/recipes/generate",
+        "https://aleeyah-api.vercel.app/recipes/generate",
         {
           history: chatHistory.map((item) => item.parts),
           message: inputValue,
