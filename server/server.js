@@ -11,17 +11,9 @@ const app = express();
 
 connectToDatabase();
 
-const allowedOrigins = [
-  "http://localhost:3000",  // Add other origins as needed
-  "https://aleeyah.vercel.app",
-  "https://aleeyah-api.vercel.app",
-];
 
-app.use(
-  cors({
-    origin: allowedOrigins,
-  })
-);
+
+app.use(cors());
 const { GoogleGenerativeAI } = require("@google/generative-ai");
 
 // Assuming you have a valid API key stored in environment variable
