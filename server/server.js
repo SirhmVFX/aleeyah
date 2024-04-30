@@ -3,6 +3,11 @@ const express = require("express");
 const authRoutes = require("./routes/auth");
 // const recipeRoutes = require("./routes/recipe");
 const connectToDatabase = require("./config/database");
+app.use(
+  cors({
+    origin: ["http://localhost:300", "https://aleeyah-api.vercel.app/"],
+  }),
+);
 
 const PORT = 8000;
 
