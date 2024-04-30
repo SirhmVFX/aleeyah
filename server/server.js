@@ -3,11 +3,7 @@ const express = require("express");
 const authRoutes = require("./routes/auth");
 // const recipeRoutes = require("./routes/recipe");
 const connectToDatabase = require("./config/database");
-app.use(
-  cors({
-    origin: ["http://localhost:300", "https://aleeyah-api.vercel.app/", "https://aleeyah.vercel.app"],
-  }),
-);
+
 
 const PORT = 8000;
 
@@ -15,6 +11,17 @@ const app = express();
 
 connectToDatabase();
 
+const allowedOrigins = [
+  "http://localhost:3000",  // Add other origins as needed
+  "https://aleeyah.vercel.app",
+  "https://aleeyah-api.vercel.app",
+];
+
+app.use(
+  cors({
+    origin: allowedOrigins,
+  })
+);
 const { GoogleGenerativeAI } = require("@google/generative-ai");
 
 // Assuming you have a valid API key stored in environment variable
