@@ -3,17 +3,12 @@ const express = require("express");
 const authRoutes = require("./routes/auth");
 // const recipeRoutes = require("./routes/recipe");
 const connectToDatabase = require("./config/database");
-
-
 const PORT = 8000;
 
 const app = express();
 
 connectToDatabase();
 
-
-
-app.use(cors());
 const { GoogleGenerativeAI } = require("@google/generative-ai");
 
 // Assuming you have a valid API key stored in environment variable
