@@ -11,19 +11,13 @@ connectToDatabase();
 
 const { GoogleGenerativeAI } = require("@google/generative-ai");
 
-// Assuming you have a valid API key stored in environment variable
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 
 let currentChatSession; // Variable to store the chat session
 
-app.use(
-  cors({
-    origin: "https://aleeyah.vercel.app/",
-  })
-);
+app.use(cors());
 app.use(express.json());
 app.use("/auth", authRoutes);
-// app.use("/recipes", recipeRoutes);
 
 app.post("/recipes/generate", async (req, res) => {
   // Check if a chat session exists, otherwise create a new one
