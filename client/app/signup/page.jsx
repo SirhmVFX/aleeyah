@@ -139,7 +139,7 @@ export default function SignUp() {
           formData.password.length > 6 &&
           formData.email.length > 0 ? (
             loading ? (
-              <button className="bg-green-200 p-4 md:p-6 rounded text-white">
+              <button className="bg-green-200 p-4 flex justify-center items-center md:p-6 rounded text-white">
                 <AiOutlineLoading3Quarters className="text-primarycolor font-bold animate-spin" />
               </button>
             ) : (
