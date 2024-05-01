@@ -30,7 +30,7 @@ export default function SignUp() {
     setloading(true);
     try {
       const response = await axios.post(
-        "https://aleeyah-api.vercel.app/auth/register",
+        "https://aleeyah.onrender.com/auth/register",
         formData
       );
       console.log(response.data.message);
