@@ -17,7 +17,7 @@ let currentChatSession;
 
 app.use(
   cors({
-    origin: "https://aleeyah.vercel.app",
+    origin: "https://aleeyah.onrender.com",
     methods: ["POST", "GET"],
     credentials: true
   })
