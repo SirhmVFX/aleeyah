@@ -58,12 +58,6 @@ export default function Login() {
     }
   };
 
-  useEffect(() => {
-    if (userToken) {
-      router.push(` /${userId}/chat`); // Redirect to home page or desired authenticated route
-    }
-  }, [userToken, userId, router]);
-
   return (
     <main className="w-full h-screen md:w-2/6 mx-auto flex flex-col items-center p-4 md:p-2 md:justify-center gap-6">
       <ToastContainer />
