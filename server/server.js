@@ -18,7 +18,7 @@ let currentChatSession; // Variable to store the chat session
 
 app.use(
   cors({
-    origin: "https://aleeyah.vercel.app",
+    origin: "*",
   })
 );
 app.use(express.json());
