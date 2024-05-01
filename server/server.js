@@ -18,6 +18,8 @@ let currentChatSession;
 app.use(
   cors({
     origin: "https://aleeyah.vercel.app",
+    methods: ["POST", "GET"],
+    credentials: true
   })
 );
 app.use(express.json());
