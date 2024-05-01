@@ -45,7 +45,7 @@ export default function Login() {
       });
 
       setTimeout(() => {
-        router.push(`/${userId}/bot`); // Redirect to login page after successful signup
+        router.push(`/${userId}/chat`); // Redirect to login page after successful signup
       }, 3000);
       // Redirect to dashboard after successful login
     } catch (error) {
