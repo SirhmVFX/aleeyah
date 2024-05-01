@@ -13,9 +13,13 @@ const { GoogleGenerativeAI } = require("@google/generative-ai");
 
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 
-let currentChatSession; // Variable to store the chat session
+let currentChatSession;
 
-app.use(cors());
+app.use(
+  cors({
+    origin: "https://aleeyah.vercel.app",
+  })
+);
 app.use(express.json());
 app.use("/auth", authRoutes);
 
