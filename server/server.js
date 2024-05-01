@@ -18,15 +18,18 @@ let currentChatSession; // Variable to store the chat session
 app.use(
   cors({
     origin: "https://aleeyah.vercel.app",
-    methods: "GET,POST,PUT,DELETE,PATCH,OPTIONS", // Allow necessary methods
-    allowedHeaders:
-      "X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version", // Allow common headers
+    // credentials: true,
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    allowedHeaders: [
+      "Content-Type",
+      "Authorization",
+      "Access-Control-Allow-Origin",
+    ],
   })
 );
 
 app.use(express.json());
 app.use("/auth", authRoutes);
-// app.use("/recipes", recipeRoutes);
 
 app.post("/recipes/generate", async (req, res) => {
   // Check if a chat session exists, otherwise create a new one
