@@ -32,7 +32,7 @@ export default function Login() {
 
     try {
       const response = await axios.post(
-        "https://aleeyah-api.vercel.app/auth/login",
+        "https://aleeyah.onrender.com/auth/login",
         formData
       );
       console.log(response?.data);
