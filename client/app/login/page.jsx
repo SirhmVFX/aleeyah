@@ -37,7 +37,7 @@ export default function Login() {
       );
       console.log(response?.data);
       setUserToken(response?.data?.token);
-      setUserId(response?.data?.user?.id); // Optional: Store token in local storage
+      setUserId(response?.data?.user?.id); 
       setUsername(response?.data?.user?.username)
       // Optional: Store token in local storage
       toast.success(response.data.message, {
