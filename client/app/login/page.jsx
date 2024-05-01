@@ -45,9 +45,9 @@ export default function Login() {
       });
 
       setTimeout(() => {
-        router.push(`/${userId}/chat`); // Redirect to login page after successful signup
+        router.push(`/${userId}/chat`);
       }, 3000);
-      // Redirect to dashboard after successful login
+      
     } catch (error) {
       console.error(error); // Display error message
       toast.error(error.response?.data?.message, {
