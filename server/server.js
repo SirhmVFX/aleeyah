@@ -17,14 +17,10 @@ const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 let currentChatSession; // Variable to store the chat session
 app.use(
   cors({
-    origin: "https://aleeyah.vercel.app",
-    credentials: true,
-    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"], // Allow the desired HTTP methods
-    allowedHeaders: [
-      "Content-Type",
-      "Authorization",
-      "Access-Control-Allow-Origin",
-    ],
+    origin: "https://aleeyah.vercel.app/",
+    methods: "GET,POST,PUT,DELETE,PATCH,OPTIONS", // Allow necessary methods
+    allowedHeaders:
+      "X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version", // Allow common headers
   })
 );
 
